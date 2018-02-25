@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="callback" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="48" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie2-8G-wZS">
+                                <rect key="frame" x="20" y="134" width="335" height="513"/>
+                                <color key="backgroundColor" red="0.87397506382590251" green="1" blue="0.92942957054537356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ali-QX-R16">
+                                <rect key="frame" x="192" y="60" width="127.5" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ttV-YR-yz3"/>
+                                </constraints>
+                                <state key="normal" title="async/异步"/>
+                                <connections>
+                                    <action selector="asyncGetData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGH-JQ-5G5"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LeY-Ks-Ayj">
+                                <rect key="frame" x="177" y="333.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9um-o0-kqt">
+                                <rect key="frame" x="16" y="60" width="127.5" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6ag-as-rkB"/>
+                                </constraints>
+                                <state key="normal" title="sync/同步"/>
+                                <connections>
+                                    <action selector="syncGetData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PRJ-Ep-Wxl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ie2-8G-wZS" secondAttribute="bottom" constant="20" id="1ND-0T-D3x"/>
+                            <constraint firstItem="ie2-8G-wZS" firstAttribute="top" secondItem="Ali-QX-R16" secondAttribute="bottom" constant="30" id="30u-FZ-rk6"/>
+                            <constraint firstItem="LeY-Ks-Ayj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DKo-Cg-2n8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ie2-8G-wZS" secondAttribute="trailing" constant="20" id="UNN-90-Ot2"/>
+                            <constraint firstItem="9um-o0-kqt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="W0H-Z4-5um"/>
+                            <constraint firstItem="LeY-Ks-Ayj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="WtH-8l-zWu"/>
+                            <constraint firstItem="Ali-QX-R16" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Z3v-5c-M2S"/>
+                            <constraint firstItem="9um-o0-kqt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zbl-aF-X0a"/>
+                            <constraint firstItem="Ali-QX-R16" firstAttribute="leading" secondItem="9um-o0-kqt" secondAttribute="trailing" constant="48.5" id="dVl-gF-df3"/>
+                            <constraint firstItem="ie2-8G-wZS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gf5-R5-zsW"/>
+                            <constraint firstItem="9um-o0-kqt" firstAttribute="width" secondItem="Ali-QX-R16" secondAttribute="width" id="hsi-XZ-OhE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ali-QX-R16" secondAttribute="trailing" constant="55.5" id="sv5-KM-R2d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="LeY-Ks-Ayj" id="xSg-DE-ldZ"/>
+                        <outlet property="asyncButton" destination="Ali-QX-R16" id="vcC-IK-TEZ"/>
+                        <outlet property="dataLabel" destination="ie2-8G-wZS" id="PcK-Lw-Ceh"/>
+                        <outlet property="syncButton" destination="9um-o0-kqt" id="yee-5M-Q0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
